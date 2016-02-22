@@ -20,7 +20,7 @@ input {
   height: 50px;
   width: 150px;
   background-color: #008A2E;
-  decoration: none;
+  outline: none;
   font-size: 28px;
   color: white;
   border-color: white;

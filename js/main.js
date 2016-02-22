@@ -13,7 +13,11 @@ $(document).ready(function(){
     
     var personalityTwo = ["Gullible", "Happy", "Harassed", "Heart-Broken", "Humble", "Hyperactive", "Impolite", "Indignant", "Introvert", "Irritable", "Mad", "Malevolent", "Mean", "Miserable", "Motivated", "Naive", "Nervous", "Noisy", "Passionate", "Pedantic", "Polite", "Precise", "Regal", "Religious", "Sad", "Sarcastic", "Scarred", "Shy", "Stressed", "Stupid", "Subservient", "Suicidal", "Superior", "Superstitious", "Suspicious", "Thoughtless", "Timid", "Tired", "Vulnerable", "Whiny", "Wise", "Zany"];
     
-    var activity = ["commiting crime", "accosting beggars", "Arguing with traders", "behaving strangely", "being chased", "brawling", "bleeding", "browsing", "chasing thieves", "cleaning boots", "crying", "gossiping", "discussing", "being drunk/high", "walking their pet", "working", "flirting", "guarding", "haggling", "hawking wares", "tavern-hopping", "hiding", "higging", "juggling", "laughing", "lecturing", "delivering things", "making things", "muttering", "negotiating", "ogling", "worshiping", "pontificating", "punishing children", "reading", "repairing things", "resting", "riding horses", "riding wagons", "running", "searching for things", "shouting", "sightseeing", "sleeping", "smiling", "speaking", "spying", "strolling", "conning", "whistling", "watching people", "watching birds"];
+    var activity = ["commiting crimes", "accosting beggars", "Arguing with traders", "behaving strangely", "being chased", "brawling", "bleeding", "browsing", "chasing thieves", "cleaning boots", "crying", "gossiping", "discussing", "being drunk/high", "walking their pet", "working", "flirting", "guarding", "haggling", "hawking wares", "tavern-hopping", "hiding", "higging", "juggling", "laughing", "lecturing", "delivering things", "making things", "muttering", "negotiating", "ogling", "worshiping", "pontificating", "punishing children", "reading", "repairing things", "resting", "riding horses", "riding wagons", "running", "searching for things", "shouting", "sightseeing", "sleeping", "smiling", "speaking", "spying", "strolling", "conning", "whistling", "watching people", "watching birds"];
+    
+    var clothing = ["torn rags", "elegant robes", "leather armor", "an ugly mask", "common clothing", "colorful garb", "steel armor", "mages\' robes", "digusting rags", "soaked boots", "a belt of many weapons", "a filled pack", "nobles\' garb", "a royal crest", "a glowing amulet", "peculiar clothing", "a blood soiled tunic"];
+    
+    var mannerismOne = ["smiling broadly", "thinking intensly", "humming to themselves", "screaming in rage", "singing with glee", "frowing with disgust", "sleeping deeply", "working tirlesly", "tending a wound", "playing a game"];
     
     
     function resizeInput() {
@@ -29,41 +33,19 @@ $(document).ready(function(){
     $("#generate").click(function(){
       $('span').empty();
 
-      /*
-      var option = '';
-      for (i=0;i<appearence.length;i++){
-       option += '<option value="'+ appearence[i] + '">' + appearence[i] + '</option>';
-      }
-      $('#appearence').append(option);
 
-      var option = '';
-      for (i=0;i<gender.length;i++){
-       option += '<option value="'+ gender[i] + '">' + gender[i] + '</option>';
-      }
-      $('#gender').append(option);
-
-      var option = '';
-      for (i=0;i<race.length;i++){
-       option += '<option value="'+ race[i] + '">' + race[i] + '</option>';
-      }
-      $('#race').append(option);
-
-      var option = '';
-      for (i=0;i<profession.length;i++){
-       option += '<option value="'+ profession[i] + '">' + profession[i] + '</option>';
-      }
-      $('#profession').append(option);
-      */
-
-      $("#appearence").text(appearence[Math.floor((Math.random() * appearence.length) + 1)]);
+      $("#appearence").text(appearence[Math.floor((Math.random() * appearence.length))]);
       $("#race").text(race[Math.floor((Math.random() * race.length))]);
       $("#gender").text(gender[Math.floor((Math.random() * gender.length))]);
       $("#profession").text(profession[Math.floor((Math.random() * profession.length))]);
       $("#personalityOne").text(personalityOne[Math.floor((Math.random() * personalityOne.length))]);
       $("#personalityTwo").text(personalityTwo[Math.floor((Math.random() * personalityTwo.length))]);
         
-$("#activity").text(activity[Math.floor((Math.random() * activity.length))]);
+      $("#activity").text(activity[Math.floor((Math.random() * activity.length))]);
+      $("#clothing").text(clothing[Math.floor((Math.random() * clothing.length))]);
+      $("#mannerismOne").text(mannerismOne[Math.floor((Math.random() * mannerismOne.length))]);
         
+      
         
       function resizeInput() {
         $(this).attr('size', $(this).val().length);
